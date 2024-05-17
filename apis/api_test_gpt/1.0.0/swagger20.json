@@ -1,0 +1,360 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "Keine Beschreibung",
+    "version" : "1.0.0",
+    "title" : "API_Test_GPT",
+    "contact" : { }
+  },
+  "host" : "localhost:8090",
+  "schemes" : [ "http" ],
+  "consumes" : [ "application/json" ],
+  "produces" : [ "application/json" ],
+  "paths" : {
+    "/getFacts/{schema_hk}" : {
+      "parameters" : [ {
+        "name" : "schema_hk",
+        "in" : "path",
+        "required" : true,
+        "type" : "string"
+      } ]
+    },
+    "/getFacts/" : {
+      "get" : {
+        "summary" : "/getFacts",
+        "operationId" : "getFacts",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDimensions/" : { },
+    "/getDimensions/Accounts" : {
+      "get" : {
+        "summary" : "getAccounts",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDimensions/Calendars" : {
+      "get" : {
+        "summary" : "getCalendars",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDimensions/Costcenters" : {
+      "get" : {
+        "summary" : "getCostcenters",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDimensions/Departments" : {
+      "get" : {
+        "summary" : "getDepartments",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDimensions/Employees" : {
+      "get" : {
+        "summary" : "getEmployees",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDimensions/Grades" : {
+      "get" : {
+        "summary" : "getGrades",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getDimensions/Salaries" : {
+      "get" : {
+        "summary" : "getSalary",
+        "produces" : [ "application/xml" ],
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200",
+            "schema" : {
+              "type" : "array",
+              "items" : {
+                "$ref" : "#/definitions/entry_salary"
+              }
+            },
+            "examples" : {
+              "application/xml" : "<salaries>\n  <row EmployeeSK=\"1018\" EmployeeHK=\"55507ef387f98cdb7edafe7fa0bdd77f\" EmployeeNumber=\"BC2649\" IntervalFromDateHK=\"9630953f8423d4587a7b88896f72598f\" IntervalFromDate=\"2020-10-01T00:00:00\" IntervalToDateHK=\"a712bd324387f05f8e63ed6462cc3f0b\" IntervalToDate=\"2020-10-31T00:00:00\" TaxYear=\"2021\" CompanyRegNo=\"HICO.00002\" NormalCashPay=\"3090.00\" TotalPackageValue=\"3090.00\" TotalGrossCashPay=\"3090.00\" TotalNettPay=\"3059.10\" TotalCostToCompany=\"3090.00\" TotalOvertimeHours=\"0.00\" TotalOvertimeValue=\"0.00\" TotalNormalTimeHours=\"173.36\" TotalNormalTimeValue=\"3090.00\" TotalBonuses=\"0.00\" TotalGroupIncome=\"3090.00\" TotalGroupOccasional=\"0.00\" TotalGroupDeductions=\"30.90\" TotalGroupStatutory=\"30.90\" TotalEmployeesTax=\"0.00\" TotalTaxAbatements=\"-30.90\" TotalUIF=\"61.80\" TotalSDL=\"30.90\" UIFRemuneration=\"3090.00\" SDLRemuneration=\"3090.00\" OIDARemuneration=\"3090.00\" />\n  <row EmployeeSK=\"1018\" EmployeeHK=\"55507ef387f98cdb7edafe7fa0bdd77f\" EmployeeNumber=\"BC2649\" IntervalFromDateHK=\"9630953f8423d4587a7b88896f72598f\" IntervalFromDate=\"2020-10-01T00:00:00\" IntervalToDateHK=\"a712bd324387f05f8e63ed6462cc3f0b\" IntervalToDate=\"2020-10-31T00:00:00\" TaxYear=\"2021\" CompanyRegNo=\"HICO.00002\" NormalCashPay=\"3090.00\" TotalPackageValue=\"3090.00\" TotalGrossCashPay=\"3090.00\" TotalNettPay=\"3059.10\" TotalCostToCompany=\"3090.00\" TotalOvertimeHours=\"0.00\" TotalOvertimeValue=\"0.00\" TotalNormalTimeHours=\"173.36\" TotalNormalTimeValue=\"3090.00\" TotalBonuses=\"0.00\" TotalGroupIncome=\"3090.00\" TotalGroupOccasional=\"0.00\" TotalGroupDeductions=\"30.90\" TotalGroupStatutory=\"30.90\" TotalEmployeesTax=\"0.00\" TotalTaxAbatements=\"-30.90\" TotalUIF=\"61.80\" TotalSDL=\"30.90\" UIFRemuneration=\"3090.00\" SDLRemuneration=\"3090.00\" OIDARemuneration=\"3090.00\" />\n  </salaries>"
+            }
+          }
+        }
+      }
+    },
+    "/getFacts/Balance" : {
+      "get" : {
+        "summary" : "getBalance",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getFacts/Employee" : {
+      "get" : {
+        "summary" : "getEmployeeSPOT",
+        "parameters" : [ {
+          "name" : "limit",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 100
+        }, {
+          "name" : "offset",
+          "in" : "query",
+          "required" : false,
+          "type" : "integer",
+          "default" : 0,
+          "x-example" : 200
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200"
+          }
+        }
+      }
+    },
+    "/getFacts/template" : {
+      "get" : {
+        "summary" : "Test_OP",
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200",
+            "schema" : {
+              "type" : "object"
+            },
+            "examples" : {
+              "application/json" : "<facts>singleline</facts>"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "entry_fact" : {
+      "type" : "object",
+      "example" : "<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"Y\" Balance_x0020_Carried_x0020_Forward=\"-9057.53\" Monthly_x0020_begin_x0020_Balance=\"0.00\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"-9057.53\" Balance=\"-9057.53\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"-9057.53\" Account_x0020_Balance=\"-9057.53\" Gr_x0020_Monthly_x0020_Balance=\"-9057.53\" Gr_x0020_Balance=\"-9057.53\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.730\" rec_SourceSystem_str=\"SAP\" />"
+    },
+    "account" : {
+      "type" : "object"
+    },
+    "entry_account" : {
+      "$ref" : "#/definitions/account"
+    },
+    "calendar" : {
+      "type" : "object"
+    },
+    "entry_calendar" : {
+      "$ref" : "#/definitions/calendar"
+    },
+    "costcenter" : {
+      "type" : "object"
+    },
+    "entry_costcenter" : {
+      "$ref" : "#/definitions/costcenter"
+    },
+    "department" : {
+      "type" : "object"
+    },
+    "entry_department" : {
+      "$ref" : "#/definitions/department"
+    },
+    "employee" : {
+      "type" : "object"
+    },
+    "entry_employee" : {
+      "$ref" : "#/definitions/employee"
+    },
+    "grade" : {
+      "type" : "object"
+    },
+    "entry_grade" : {
+      "$ref" : "#/definitions/grade"
+    },
+    "salary" : {
+      "type" : "object"
+    },
+    "entry_salary" : {
+      "$ref" : "#/definitions/salary"
+    },
+    "balance" : {
+      "type" : "object"
+    },
+    "bilance" : {
+      "type" : "object"
+    },
+    "employee_all" : {
+      "type" : "object"
+    }
+  }
+}

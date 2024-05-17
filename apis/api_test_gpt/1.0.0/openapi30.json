@@ -1,0 +1,385 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "API_Test_GPT",
+    "description" : "Keine Beschreibung",
+    "contact" : { },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "http://localhost:8090"
+  } ],
+  "paths" : {
+    "/getFacts/{schema_hk}" : {
+      "summary" : "Fact entries of CDM",
+      "parameters" : [ {
+        "name" : "schema_hk",
+        "in" : "path",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/getFacts/" : {
+      "get" : {
+        "summary" : "/getFacts",
+        "operationId" : "getFacts",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/entry_fact"
+                  }
+                },
+                "example" : "<fact>\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"Y\" Balance_x0020_Carried_x0020_Forward=\"-9057.53\" Monthly_x0020_begin_x0020_Balance=\"0.00\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"-9057.53\" Balance=\"-9057.53\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"-9057.53\" Account_x0020_Balance=\"-9057.53\" Gr_x0020_Monthly_x0020_Balance=\"-9057.53\" Gr_x0020_Balance=\"-9057.53\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.730\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"Y\" Balance_x0020_Carried_x0020_Forward=\"-9157.53\" Monthly_x0020_begin_x0020_Balance=\"-9057.53\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"-100.00\" Balance=\"-9157.53\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"-100.00\" Account_x0020_Balance=\"-9157.53\" Gr_x0020_Monthly_x0020_Balance=\"-100.00\" Gr_x0020_Balance=\"-9157.53\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.750\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"Y\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-9157.53\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"3596.82\" Balance=\"-5560.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"3596.82\" Account_x0020_Balance=\"-5560.71\" Gr_x0020_Monthly_x0020_Balance=\"3596.82\" Gr_x0020_Balance=\"-5560.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.757\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"N\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-5560.71\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"0.00\" Balance=\"-5560.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"0.00\" Account_x0020_Balance=\"-5560.71\" Gr_x0020_Monthly_x0020_Balance=\"0.00\" Gr_x0020_Balance=\"-5560.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.760\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"N\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-5560.71\" Monthly_x0020_Debit=\"9200.00\" Monthly_x0020_Credit=\"-5000.00\" Monthly_x0020_Balance=\"4200.00\" Balance=\"-1360.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"4200.00\" Account_x0020_Balance=\"-1360.71\" Gr_x0020_Monthly_x0020_Balance=\"4200.00\" Gr_x0020_Balance=\"-1360.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.763\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"N\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-1360.71\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"0.00\" Balance=\"-1360.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"0.00\" Account_x0020_Balance=\"-1360.71\" Gr_x0020_Monthly_x0020_Balance=\"0.00\" Gr_x0020_Balance=\"-1360.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.770\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-02-28T00:00:00\" Date_hk=\"a1ccae0dceda99f0fb938b374d34e723\" Period=\"202102\" Year=\"2021\" Month=\"2\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"N\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-1360.71\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"0.00\" Balance=\"-1360.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"0.00\" Account_x0020_Balance=\"-1360.71\" Gr_x0020_Monthly_x0020_Balance=\"0.00\" Gr_x0020_Balance=\"-1360.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.770\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-02-28T00:00:00\" Date_hk=\"a1ccae0dceda99f0fb938b374d34e723\" Period=\"202102\" Year=\"2021\" Month=\"2\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"N\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-1360.71\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"0.00\" Balance=\"-1360.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"0.00\" Account_x0020_Balance=\"-1360.71\" Gr_x0020_Monthly_x0020_Balance=\"0.00\" Gr_x0020_Balance=\"-1360.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.773\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-02-28T00:00:00\" Date_hk=\"a1ccae0dceda99f0fb938b374d34e723\" Period=\"202102\" Year=\"2021\" Month=\"2\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"N\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-1360.71\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"0.00\" Balance=\"-1360.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"0.00\" Account_x0020_Balance=\"-1360.71\" Gr_x0020_Monthly_x0020_Balance=\"0.00\" Gr_x0020_Balance=\"-1360.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.777\" rec_SourceSystem_str=\"SAP\" />\n<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-03-31T00:00:00\" Date_hk=\"94dbf171ceac4ce3106b93f3ad4d41a4\" Period=\"202103\" Year=\"2021\" Month=\"3\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"N\" Balance_x0020_Carried_x0020_Forward=\"-5560.71\" Monthly_x0020_begin_x0020_Balance=\"-1360.71\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"0.00\" Balance=\"-1360.71\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"0.00\" Account_x0020_Balance=\"-1360.71\" Gr_x0020_Monthly_x0020_Balance=\"0.00\" Gr_x0020_Balance=\"-1360.71\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.780\" rec_SourceSystem_str=\"SAP\" />\n</fact>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getDimensions/" : { },
+    "/getDimensions/Accounts" : {
+      "get" : {
+        "summary" : "getAccounts",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/account"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getDimensions/Calendars" : {
+      "get" : {
+        "summary" : "getCalendars",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/calendar"
+                  }
+                },
+                "example" : "<calendars>\n  <row Calendar_hk=\"000eff92bb9e1969710c72c5bac2de03\" Date=\"2021-01-02T00:00:00\" Date_int=\"20210102\" Week=\"1\" Year=\"2021\" Month_num=\"1\" Day=\"2\" Quarter_num=\"1\" HalfYear_num=\"1\" Weekday_num=\"6\" Weekday=\"Saturday\" Month=\"January\" Quarter=\"1. Quarter\" Half_x0020_Year=\"1. HalfYear\" Workday=\"0\" rec_Load_ts=\"2023-06-07T10:20:56.823\" rec_SourceSystem_str=\"CORE\" />\n  <row Calendar_hk=\"000eff92bb9e1969710c72c5bac2de03\" Date=\"2021-01-02T00:00:00\" Date_int=\"20210102\" Week=\"1\" Year=\"2021\" Month_num=\"1\" Day=\"2\" Quarter_num=\"1\" HalfYear_num=\"1\" Weekday_num=\"6\" Weekday=\"Saturday\" Month=\"January\" Quarter=\"1. Quarter\" Half_x0020_Year=\"1. HalfYear\" Workday=\"0\" rec_Load_ts=\"2023-06-07T10:20:56.823\" rec_SourceSystem_str=\"CORE\" />\n</calendars>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getDimensions/Costcenters" : {
+      "get" : {
+        "summary" : "getCostcenters",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/costcenter"
+                  }
+                },
+                "example" : "<costcenters>\n  <row CostCentreHK=\"c4ca4238a0b923820dcc509a6f75849b\" CostCentreID=\"1\" CostCentre=\"Austria\" />\n  <row CostCentreHK=\"c4ca4238a0b923820dcc509a6f75849b\" CostCentreID=\"1\" CostCentre=\"Austria\" />\n  <row CostCentreHK=\"c4ca4238a0b923820dcc509a6f75849b\" CostCentreID=\"1\" CostCentre=\"Austria\" />\n</costcenters>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getDimensions/Departments" : {
+      "get" : {
+        "summary" : "getDepartments",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/department"
+                  }
+                },
+                "example" : "<departments>\n  <row DepartmentHK=\"a87ff679a2f3e71d9181a67b7542122c\" DepartmentID=\"4\" Department=\"Operations\" />\n  <row DepartmentHK=\"a87ff679a2f3e71d9181a67b7542122c\" DepartmentID=\"4\" Department=\"Operations\" />\n</departments>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getDimensions/Employees" : {
+      "get" : {
+        "summary" : "getEmployees",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/employee"
+                  }
+                },
+                "example" : "<employees>\n  <row EmployeeSK=\"9060\" EmployeeHK=\"20c097b913a26ba121cd74da10e7558f\" EmployeeNumber=\"BC7249\" EntryDate=\"2023-02-01T00:00:00\" CompanyRegNo=\"HICO.00002\" CompanyName=\"HICO Demo \" FirstNames=\"Baby\" Surname=\"Thibela\" CurrentEmployeeStatus=\"Active\" MaritalStatus=\"Single / Never Married\" EmployeeStatus=\"Active\" CurrentStatusEffectiveDate=\"26/02/2023\" Race=\"Coloured\" Gender=\"Male\" Nationality=\"ZAF\" ForeignNational=\"National\" DateOfBirth=\"1970-06-05T00:00:00\" JobGrade=\"Entry-level\" JobGradeHK=\"c4ca4238a0b923820dcc509a6f75849b\" JobGradeEffectiveDate=\"26/02/2023\" JobTitle=\"Clerk\" JobTitleEffectiveDate=\"26/02/2023\" OccupationalLevel=\"Unskilled &amp; Defined Decision Makers\" OccupationalCatagory=\"Service and Sales Workers\" CostCentre=\"Germany\" CostCentreHK=\"c81e728d9d4c2f636f067f89cc14862c\" CostCentreEffectiveDate=\"26/02/2023\" Department=\"Marketing &amp; Sales\" DepartmentHK=\"c81e728d9d4c2f636f067f89cc14862c\" DepartmentEffectiveDate=\"26/02/2023\" EmploymentType=\"Temporary\" ExitDate=\"9999-12-31T00:00:00\" ContractDate=\"2023-02-26T00:00:00\" ExitDateHK=\"2f4e01157c1afb7db9137fbc27dc9f09\" ContractDateHK=\"4a153d17df87bc956ba907b15e68b7cb\" IntervalFromDate=\"2023-02-01T00:00:00\" Hashdiff=\"3d6a5cae11570d5bc416e5e46cfe35aa\" scd_start=\"2023-02-26T00:00:00\" scd_version=\"2\" scd_active=\"1\" />\n  <row EmployeeSK=\"9060\" EmployeeHK=\"20c097b913a26ba121cd74da10e7558f\" EmployeeNumber=\"BC7249\" EntryDate=\"2023-02-01T00:00:00\" CompanyRegNo=\"HICO.00002\" CompanyName=\"HICO Demo \" FirstNames=\"Baby\" Surname=\"Thibela\" CurrentEmployeeStatus=\"Active\" MaritalStatus=\"Single / Never Married\" EmployeeStatus=\"Active\" CurrentStatusEffectiveDate=\"26/02/2023\" Race=\"Coloured\" Gender=\"Male\" Nationality=\"ZAF\" ForeignNational=\"National\" DateOfBirth=\"1970-06-05T00:00:00\" JobGrade=\"Entry-level\" JobGradeHK=\"c4ca4238a0b923820dcc509a6f75849b\" JobGradeEffectiveDate=\"26/02/2023\" JobTitle=\"Clerk\" JobTitleEffectiveDate=\"26/02/2023\" OccupationalLevel=\"Unskilled &amp; Defined Decision Makers\" OccupationalCatagory=\"Service and Sales Workers\" CostCentre=\"Germany\" CostCentreHK=\"c81e728d9d4c2f636f067f89cc14862c\" CostCentreEffectiveDate=\"26/02/2023\" Department=\"Marketing &amp; Sales\" DepartmentHK=\"c81e728d9d4c2f636f067f89cc14862c\" DepartmentEffectiveDate=\"26/02/2023\" EmploymentType=\"Temporary\" ExitDate=\"9999-12-31T00:00:00\" ContractDate=\"2023-02-26T00:00:00\" ExitDateHK=\"2f4e01157c1afb7db9137fbc27dc9f09\" ContractDateHK=\"4a153d17df87bc956ba907b15e68b7cb\" IntervalFromDate=\"2023-02-01T00:00:00\" Hashdiff=\"3d6a5cae11570d5bc416e5e46cfe35aa\" scd_start=\"2023-02-26T00:00:00\" scd_version=\"2\" scd_active=\"1\" />\n</employees>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getDimensions/Grades" : {
+      "get" : {
+        "summary" : "getGrades",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/grade"
+                  }
+                },
+                "example" : "<grades>\n  <row JobGradeHK=\"1679091c5a880faf6fb5e6087eb1b2dc\" JobGradeID=\"6\" JobGrade=\"Senior Management\" />\n  <row JobGradeHK=\"1679091c5a880faf6fb5e6087eb1b2dc\" JobGradeID=\"6\" JobGrade=\"Senior Management\" />\n</grades>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getDimensions/Salaries" : {
+      "get" : {
+        "summary" : "getSalary",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/salary"
+                  }
+                },
+                "example" : "<salaries>\n  <row EmployeeSK=\"1018\" EmployeeHK=\"55507ef387f98cdb7edafe7fa0bdd77f\" EmployeeNumber=\"BC2649\" IntervalFromDateHK=\"9630953f8423d4587a7b88896f72598f\" IntervalFromDate=\"2020-10-01T00:00:00\" IntervalToDateHK=\"a712bd324387f05f8e63ed6462cc3f0b\" IntervalToDate=\"2020-10-31T00:00:00\" TaxYear=\"2021\" CompanyRegNo=\"HICO.00002\" NormalCashPay=\"3090.00\" TotalPackageValue=\"3090.00\" TotalGrossCashPay=\"3090.00\" TotalNettPay=\"3059.10\" TotalCostToCompany=\"3090.00\" TotalOvertimeHours=\"0.00\" TotalOvertimeValue=\"0.00\" TotalNormalTimeHours=\"173.36\" TotalNormalTimeValue=\"3090.00\" TotalBonuses=\"0.00\" TotalGroupIncome=\"3090.00\" TotalGroupOccasional=\"0.00\" TotalGroupDeductions=\"30.90\" TotalGroupStatutory=\"30.90\" TotalEmployeesTax=\"0.00\" TotalTaxAbatements=\"-30.90\" TotalUIF=\"61.80\" TotalSDL=\"30.90\" UIFRemuneration=\"3090.00\" SDLRemuneration=\"3090.00\" OIDARemuneration=\"3090.00\" />\n  <row EmployeeSK=\"1018\" EmployeeHK=\"55507ef387f98cdb7edafe7fa0bdd77f\" EmployeeNumber=\"BC2649\" IntervalFromDateHK=\"9630953f8423d4587a7b88896f72598f\" IntervalFromDate=\"2020-10-01T00:00:00\" IntervalToDateHK=\"a712bd324387f05f8e63ed6462cc3f0b\" IntervalToDate=\"2020-10-31T00:00:00\" TaxYear=\"2021\" CompanyRegNo=\"HICO.00002\" NormalCashPay=\"3090.00\" TotalPackageValue=\"3090.00\" TotalGrossCashPay=\"3090.00\" TotalNettPay=\"3059.10\" TotalCostToCompany=\"3090.00\" TotalOvertimeHours=\"0.00\" TotalOvertimeValue=\"0.00\" TotalNormalTimeHours=\"173.36\" TotalNormalTimeValue=\"3090.00\" TotalBonuses=\"0.00\" TotalGroupIncome=\"3090.00\" TotalGroupOccasional=\"0.00\" TotalGroupDeductions=\"30.90\" TotalGroupStatutory=\"30.90\" TotalEmployeesTax=\"0.00\" TotalTaxAbatements=\"-30.90\" TotalUIF=\"61.80\" TotalSDL=\"30.90\" UIFRemuneration=\"3090.00\" SDLRemuneration=\"3090.00\" OIDARemuneration=\"3090.00\" />\n  </salaries>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getFacts/Balance" : {
+      "get" : {
+        "summary" : "getBalance",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/bilance"
+                  }
+                },
+                "example" : "<fact><row Schema_hk=\"9d8b572681dd1c0798df20cbf08fd662\" Schema=\"YCOA\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"Y\" Balance_x0020_Carried_x0020_Forward=\"-35119.96\" Monthly_x0020_begin_x0020_Balance=\"0.00\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"-35119.96\" Balance=\"-35119.96\" Account_x0020_Monthly_x0020_Balance=\"0.00\" Account_x0020_Balance=\"0.00\" Gr_x0020_Monthly_x0020_Balance=\"0.00\" Gr_x0020_Balance=\"0.00\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" Calendar_hk=\"56acd4f269bafddc3987c14f4881bb54\" Date_int=\"20210131\" Week=\"6\" Month_num=\"1\" Day=\"31\" Quarter_num=\"1\" HalfYear_num=\"1\" Weekday_num=\"7\" Weekday=\"Sunday\" Quarter=\"1. Quarter\" Half_x0020_Year=\"1. HalfYear\" Account_hk=\"0\" Company_x0020_Area_x0020_No=\"1000\" Account_x0020_Plan=\"YCOA\" Consolid_x0020_Account_x0020_No=\"111100\" Account_id=\"110_1710_YCOA_11001000\" Account_x0020_Text=\"Bank 1 - Bank (Main) Account\" Account_x0020_Class_x0020_Text=\"B_BILANZ\" Liquidity_x0020_Cn=\"N\" Overdraft=\"0.00\" Creation_x0020_Year=\"2\" /></fact>"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getFacts/Employee" : {
+      "get" : {
+        "summary" : "getEmployeeSPOT",
+        "parameters" : [ {
+          "$ref" : "#/components/parameters/limit"
+        }, {
+          "$ref" : "#/components/parameters/offset"
+        } ],
+        "responses" : {
+          "2XX" : {
+            "description" : "Status 2XX",
+            "content" : {
+              "application/xml" : {
+                "schema" : {
+                  "type" : "array",
+                  "items" : {
+                    "$ref" : "#/components/schemas/employee_all"
+                  }
+                },
+                "example" : "<row EntryDate=\"2020-03-01T00:00:00\" CompanyName=\"HICO Demo \" FirstNames=\"Magomarele\" Surname=\"Shetunyenga\" CurrentEmployeeStatus=\"Active\" MaritalStatus=\"Widowed\" EmployeeStatus=\"Active\" CurrentStatusEffectiveDate=\"27/03/2019\" Race=\"Other\" Gender=\"Female\" Nationality=\"ZAF\" ForeignNational=\"National\" DateOfBirth=\"1968-12-31T00:00:00\" JobGradeEffectiveDate=\"27/03/2019\" JobTitle=\"Data Entry Clerk\" JobTitleEffectiveDate=\"27/03/2019\" OccupationalLevel=\"Unskilled &amp; Defined Decision Makers\" OccupationalCatagory=\"Service and Sales Workers\" CostCentreEffectiveDate=\"27/03/2019\" DepartmentEffectiveDate=\"27/03/2019\" EmploymentType=\"Permanent\" ExitDate=\"9999-12-31T00:00:00\" ContractDate=\"2019-03-27T00:00:00\" ExitDateHK=\"2f4e01157c1afb7db9137fbc27dc9f09\" ContractDateHK=\"3ec4c2bd06a9c6dccf82fd1b5080c1a9\" Hashdiff=\"d62812cf3c6f256b5dbcd9047114862b\" scd_start=\"2020-03-01T00:00:00\" scd_end=\"2022-01-05T00:00:00\" scd_version=\"1\" scd_active=\"0\" CostCentreID=\"3\" DepartmentID=\"2\" JobGradeID=\"1\" IntervalFromDateHK=\"9630953f8423d4587a7b88896f72598f\" IntervalToDateHK=\"a712bd324387f05f8e63ed6462cc3f0b\" IntervalToDate=\"2020-10-31T00:00:00\" TaxYear=\"2021\" NormalCashPay=\"3090.00\" TotalPackageValue=\"3090.00\" TotalGrossCashPay=\"3090.00\" TotalNettPay=\"3059.10\" TotalCostToCompany=\"3090.00\" TotalOvertimeHours=\"0.00\" TotalOvertimeValue=\"0.00\" TotalNormalTimeHours=\"173.36\" TotalNormalTimeValue=\"3090.00\" TotalBonuses=\"0.00\" TotalGroupIncome=\"3090.00\" TotalGroupOccasional=\"0.00\" TotalGroupDeductions=\"30.90\" TotalGroupStatutory=\"30.90\" TotalEmployeesTax=\"0.00\" TotalTaxAbatements=\"-30.90\" TotalUIF=\"61.80\" TotalSDL=\"30.90\" UIFRemuneration=\"3090.00\" SDLRemuneration=\"3090.00\" OIDARemuneration=\"3090.00\" />"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/getFacts/template" : {
+      "get" : {
+        "summary" : "Test_OP",
+        "responses" : {
+          "200" : {
+            "description" : "Status 200",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "type" : "object"
+                },
+                "example" : "<facts>singleline</facts>"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "entry_fact" : {
+        "type" : "object",
+        "example" : "<row Schema_hk=\"b29015e368af9e66239f5ac48448b979\" Schema=\"YCOA\" Company_x0020_No=\"110\" Company_hk=\"a87fdcf6948095213d6d2737659d64e7\" Branch_x0020_No=\"1710\" Date=\"2021-01-31T00:00:00\" Date_hk=\"56acd4f269bafddc3987c14f4881bb54\" Period=\"202101\" Year=\"2021\" Month=\"1\" Account_hk=\"ada79b010949af6f7eb709d13110a81f\" Account_x0020_No=\"10010000\" Balance_x0020_Carried_x0020_Forward_x0020_Cn=\"Y\" Balance_x0020_Carried_x0020_Forward=\"-9057.53\" Monthly_x0020_begin_x0020_Balance=\"0.00\" Monthly_x0020_Debit=\"0.00\" Monthly_x0020_Credit=\"0.00\" Monthly_x0020_Balance=\"-9057.53\" Balance=\"-9057.53\" Acceptance_x0020_Cn=\"N\" Acceptance_x0020_Gr=\"10010000\" Account_x0020_Monthly_x0020_Balance=\"-9057.53\" Account_x0020_Balance=\"-9057.53\" Gr_x0020_Monthly_x0020_Balance=\"-9057.53\" Gr_x0020_Balance=\"-9057.53\" Account_x0020_Type=\"Petty Cash\" Account_x0020_Category=\"1\" Account_x0020_Class=\"111100\" Currency_x0020_Cc=\"USD\" Currency_x0020_Gc=\"USD\" Currency_x0020_Coc=\"CHF\" Exchange_x0020_Rate_x0020_Cc_x0020_Gc=\"1.00000\" Exchange_x0020_Rate_x0020_Gc_x0020_Coc=\"0.00000\" Currency_x0020_Dim=\"1\" rec_Load_ts=\"2023-04-12T09:30:26.730\" rec_SourceSystem_str=\"SAP\" />"
+      },
+      "account" : {
+        "type" : "object"
+      },
+      "entry_account" : {
+        "$ref" : "#/components/schemas/account"
+      },
+      "calendar" : {
+        "type" : "object"
+      },
+      "entry_calendar" : {
+        "$ref" : "#/components/schemas/calendar"
+      },
+      "costcenter" : {
+        "type" : "object"
+      },
+      "entry_costcenter" : {
+        "$ref" : "#/components/schemas/costcenter"
+      },
+      "department" : {
+        "type" : "object"
+      },
+      "entry_department" : {
+        "$ref" : "#/components/schemas/department"
+      },
+      "employee" : {
+        "type" : "object"
+      },
+      "entry_employee" : {
+        "$ref" : "#/components/schemas/employee"
+      },
+      "grade" : {
+        "type" : "object"
+      },
+      "entry_grade" : {
+        "$ref" : "#/components/schemas/grade"
+      },
+      "salary" : {
+        "type" : "object"
+      },
+      "entry_salary" : {
+        "$ref" : "#/components/schemas/salary"
+      },
+      "balance" : {
+        "type" : "object"
+      },
+      "bilance" : {
+        "type" : "object"
+      },
+      "employee_all" : {
+        "type" : "object"
+      }
+    },
+    "parameters" : {
+      "limit" : {
+        "name" : "limit",
+        "in" : "query",
+        "required" : false,
+        "schema" : {
+          "type" : "integer",
+          "default" : 0
+        },
+        "example" : 100
+      },
+      "offset" : {
+        "name" : "offset",
+        "in" : "query",
+        "required" : false,
+        "schema" : {
+          "type" : "integer",
+          "default" : 0
+        },
+        "example" : 200
+      }
+    }
+  }
+}
