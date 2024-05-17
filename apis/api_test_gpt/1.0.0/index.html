@@ -1,0 +1,2709 @@
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+    <meta data-indicator-element-id="dhcIndicator" name="dhc-aware-page" />
+      <meta name="try-in-tester-api-context" content="{&#34;etnResource6Url&#34;:&#34;/apitesterformat6.json&#34;}" />
+      <title>API_Test_GPT</title>
+      <meta content="API_Test_GPT" property="og:title">
+    
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/apis/api_test_gpt/1.0.0/">
+
+
+<link rel="icon" href="../../../img/brand-logo.png" sizes="196x196" />
+<link rel="apple-touch-icon" href="../../../img/brand-logo.png" sizes="196x196" />
+
+<link rel="stylesheet" href="../../../css/full.min.e55d9236833ff9b3819e293fc402c2b5454b9015e74e6521a4916948975ee1f8.css" media="all" />
+
+
+<meta name="theme-color" content="#fafafa" />
+</head>
+	<body class="api-reference">
+		<header class="header">
+
+
+<ul class="header__menu">
+  <li class="header__item">
+    <a class="header__link header__brand " href="../../../" >
+      <span class="sr-only">Home</span>
+      <span>API Portal</span>
+    </a>
+  </li>
+<li class="header__item">
+    <a href="../../../getting-started/" class="header__link"  >Getting started</a>
+  </li>
+<li class="header__item">
+    <a href="../../../apis/" class="header__link header__section--active"  >APIs</a>
+  </li>
+</ul>
+</header>
+    <aside class="left-panel">
+        
+
+<div class="left-panel__wrapper">
+  <div class="api__general">
+    <h1 class="left-panel__api-title">API_Test_GPT</h1>
+
+
+<div class="dropdown api__version"><span class="btn btn__version api__version--selected">1.0.0</span>
+</div>
+</div>
+  <div class="api__action">
+    
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-api-try-in-tester "
+          type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+
+<div class="dropdown">
+  <button class="js-dropdown btn btn--primary" aria-controls="download" aria-haspopup="true" aria-expanded="false" type="button">
+    Download<svg viewBox="0 0 16 16" aria-hidden="true" class="dropdown__icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg>
+  </button>
+  <div id="download" role="menu" class="dropdown__content" hidden>
+    <a href="../../../apis/api_test_gpt/1.0.0/openapi30.json" role="menuitem" class="dropdown__item" tabindex="-1" download="api_test_gpt-1.0.0-openapi30.json">OAS 3</a>
+    <a href="../../../apis/api_test_gpt/1.0.0/swagger20.json" role="menuitem" class="dropdown__item" tabindex="-1" download="api_test_gpt-1.0.0-swagger20.json">Swagger 2</a>
+    </div>
+  </div>
+</div>
+
+  <form class="search-form">
+    <label class="search-form__label" for="filter">
+      <svg class="search-form__icon" aria-hidden="true" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M7.5 14C3.9 14 1 11.1 1 7.5S3.9 1 7.5 1 14 3.9 14 7.5 11.1 14 7.5 14zm0-11C5 3 3 5 3 7.5S5 12 7.5 12 12 10 12 7.5 10 3 7.5 3zm6 9c-.4.6-.9 1.1-1.5 1.5l2.5 2.5 1.5-1.5-2.5-2.5z"></path></svg>
+      <span class="sr-only">Filter</span>
+    </label>
+    <input class="search-form__field js-filter" id="filter" type="search" placeholder="Filter" />
+  </form>
+
+  <hr />
+
+  <nav class="api__nav" aria-label="API content">
+    <ul class="api-toc js-api-toc">
+<li><ul class="api-toc__content">
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_fact">entry_fact</a></li>
+    
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getfacts">/getFacts</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getaccounts">getAccounts</a></li>
+        <li class="api-toc__item api-toc__item--datatype"><a href="#type_account">account</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_account">entry_account</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_calendar">calendar</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_calendar">entry_calendar</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_costcenter">costcenter</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_costcenter">entry_costcenter</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_department">department</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_department">entry_department</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_employee">employee</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_employee">entry_employee</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_grade">grade</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_grade">entry_grade</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_salary">salary</a></li>
+    <li class="api-toc__item api-toc__item--datatype"><a href="#type_entry_salary">entry_salary</a></li>
+    
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getcalendars">getCalendars</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getcostcenters">getCostcenters</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getdepartments">getDepartments</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getemployees">getEmployees</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getgrades">getGrades</a></li>
+        
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getsalary">getSalary</a></li>
+        <li class="api-toc__item api-toc__item--datatype"><a href="#type_balance">balance</a></li>
+    
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getbalance">getBalance</a></li>
+        <li class="api-toc__item api-toc__item--datatype"><a href="#type_bilance">bilance</a></li>
+    
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_getemployeespot">getEmployeeSPOT</a></li>
+        <li class="api-toc__item api-toc__item--datatype"><a href="#type_employee_all">employee_all</a></li>
+    
+  <li class="api-toc__item api-toc__item--request-get"><a href="#operation_test_op">Test_OP</a></li>
+        </ul>
+</li>
+</ul>
+  </nav>
+</div>
+
+</aside>
+      <main id="content">
+        
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+	<ol class="breadcrumb__list">
+		<li class="breadcrumb__item"><a href="../../../" class="breadcrumb__element">Home</a></li>
+    <li class="breadcrumb__item"><span class="breadcrumb__separator" aria-hidden="true"> / </span><a href="../../../apis/" class="breadcrumb__element">APIs</a></li>
+
+  
+  <li class="breadcrumb__item"><span class="breadcrumb__separator" aria-hidden="true"> / </span><a aria-current="page" href="../../../apis/api_test_gpt/1.0.0/" class="breadcrumb__element">API_Test_GPT</a></li>
+</ol>
+</nav>
+
+
+<h2 class="api-reference__api-title" id="top">API_Test_GPT</h2>
+<div class="api__content_description wysiwyg">Keine Beschreibung</div>
+
+<dl class="definition contact">
+  </dl>
+<div class="definition">
+      <h3 id="mediatypes">Media type</h3>
+      <div>application/json</div>
+    </div>
+<div class="definition">
+      <h3 id="endpoints">Endpoint</h3>
+      <ul class="endpoints">
+        <li class="endpoint__value">
+          <span class="endpoint__url">http://localhost:8090</span>
+          </li>
+        </ul>
+    </div>
+<div class="definition">
+      <h3 id="global-security">Global security</h3>
+      <p class="note">These security schemes apply to the entire API</p>
+      <div>
+        
+
+<ul class="global-security">
+
+<li class="global-security__type">No authentication</li>
+</ul>
+</div>
+    </div>
+
+
+
+
+<section id="type_entry_fact_anchor" class="datatype" aria-labelledby="type_entry_fact">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_fact">entry_fact</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_fact" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_fact_8b6c4b55876116f1a5cf298678ae1376" class="definition-example__title"><span>entry_fact</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_fact_8b6c4b55876116f1a5cf298678ae1376">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">Schema_hk=</span><span class="s">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="na">Schema=</span><span class="s">&#34;YCOA&#34;</span> <span class="na">Company_x0020_No=</span><span class="s">&#34;110&#34;</span> <span class="na">Company_hk=</span><span class="s">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="na">Branch_x0020_No=</span><span class="s">&#34;1710&#34;</span> <span class="na">Date=</span><span class="s">&#34;2021-01-31T00:00:00&#34;</span> <span class="na">Date_hk=</span><span class="s">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="na">Period=</span><span class="s">&#34;202101&#34;</span> <span class="na">Year=</span><span class="s">&#34;2021&#34;</span> <span class="na">Month=</span><span class="s">&#34;1&#34;</span> <span class="na">Account_hk=</span><span class="s">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="na">Account_x0020_No=</span><span class="s">&#34;10010000&#34;</span> <span class="na">Balance_x0020_Carried_x0020_Forward_x0020_Cn=</span><span class="s">&#34;Y&#34;</span> <span class="na">Balance_x0020_Carried_x0020_Forward=</span><span class="s">&#34;-9057.53&#34;</span> <span class="na">Monthly_x0020_begin_x0020_Balance=</span><span class="s">&#34;0.00&#34;</span> <span class="na">Monthly_x0020_Debit=</span><span class="s">&#34;0.00&#34;</span> <span class="na">Monthly_x0020_Credit=</span><span class="s">&#34;0.00&#34;</span> <span class="na">Monthly_x0020_Balance=</span><span class="s">&#34;-9057.53&#34;</span> <span class="na">Balance=</span><span class="s">&#34;-9057.53&#34;</span> <span class="na">Acceptance_x0020_Cn=</span><span class="s">&#34;N&#34;</span> <span class="na">Acceptance_x0020_Gr=</span><span class="s">&#34;10010000&#34;</span> <span class="na">Account_x0020_Monthly_x0020_Balance=</span><span class="s">&#34;-9057.53&#34;</span> <span class="na">Account_x0020_Balance=</span><span class="s">&#34;-9057.53&#34;</span> <span class="na">Gr_x0020_Monthly_x0020_Balance=</span><span class="s">&#34;-9057.53&#34;</span> <span class="na">Gr_x0020_Balance=</span><span class="s">&#34;-9057.53&#34;</span> <span class="na">Account_x0020_Type=</span><span class="s">&#34;Petty Cash&#34;</span> <span class="na">Account_x0020_Category=</span><span class="s">&#34;1&#34;</span> <span class="na">Account_x0020_Class=</span><span class="s">&#34;111100&#34;</span> <span class="na">Currency_x0020_Cc=</span><span class="s">&#34;USD&#34;</span> <span class="na">Currency_x0020_Gc=</span><span class="s">&#34;USD&#34;</span> <span class="na">Currency_x0020_Coc=</span><span class="s">&#34;CHF&#34;</span> <span class="na">Exchange_x0020_Rate_x0020_Cc_x0020_Gc=</span><span class="s">&#34;1.00000&#34;</span> <span class="na">Exchange_x0020_Rate_x0020_Gc_x0020_Coc=</span><span class="s">&#34;0.00000&#34;</span> <span class="na">Currency_x0020_Dim=</span><span class="s">&#34;1&#34;</span> <span class="na">rec_Load_ts=</span><span class="s">&#34;2023-04-12T09:30:26.730&#34;</span> <span class="na">rec_SourceSystem_str=</span><span class="s">&#34;SAP&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="operation_getfacts_anchor" class="operation" aria-labelledby="operation_getfacts">
+	<div class="operation__content">
+        <h3 id="operation_getfacts">/getFacts</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getFacts/</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_bb48834f9b658eb008b17c575e2c93c4applicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="36fbacc423c0c303a2cc0b4fee0ff4d4">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_fact&#34;&gt;entry_fact&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_fact&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_fact details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="36fbacc423c0c303a2cc0b4fee0ff4d4">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_fact</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_bb48834f9b658eb008b17c575e2c93c4applicationjson" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_bb48834f9b658eb008b17c575e2c93c4applicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">&lt;fact&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-01-31T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202101&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;Y&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.730&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-01-31T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202101&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;Y&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-9157.53&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9057.53&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-100.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-9157.53&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-100.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9157.53&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-100.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9157.53&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.750&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-01-31T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202101&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;Y&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-9157.53&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;3596.82&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;3596.82&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;3596.82&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.757&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-01-31T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202101&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.760&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-01-31T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202101&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;9200.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;-5000.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;4200.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;4200.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;4200.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.763&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-01-31T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202101&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.770&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-02-28T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;a1ccae0dceda99f0fb938b374d34e723&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202102&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;2&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.770&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-02-28T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;a1ccae0dceda99f0fb938b374d34e723&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202102&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;2&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.773&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-02-28T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;a1ccae0dceda99f0fb938b374d34e723&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202102&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;2&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.777&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;b29015e368af9e66239f5ac48448b979&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;110&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Branch_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1710&#34;</span> <span class="err">Date=</span><span class="s2">&#34;2021-03-31T00:00:00&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;94dbf171ceac4ce3106b93f3ad4d41a4&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202103&#34;</span> <span class="err">Year=</span><span class="s2">&#34;2021&#34;</span> <span class="err">Month=</span><span class="s2">&#34;3&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;ada79b010949af6f7eb709d13110a81f&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-5560.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Acceptance_x</span><span class="mi">0020</span><span class="err">_Gr=</span><span class="s2">&#34;10010000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-1360.71&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Type=</span><span class="s2">&#34;Petty Cash&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Category=</span><span class="s2">&#34;1&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">rec_Load_ts=</span><span class="s2">&#34;2023-04-12T09:30:26.780&#34;</span> <span class="err">rec_SourceSystem_str=</span><span class="s2">&#34;SAP&#34;</span> <span class="err">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="err">&lt;/fact&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="8f1c502a-9732-4039-95f3-9b505d54afdf" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+
+<section id="operation_getaccounts_anchor" class="operation" aria-labelledby="operation_getaccounts">
+	<div class="operation__content">
+        <h3 id="operation_getaccounts">getAccounts</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getDimensions/Accounts</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_43582be8fec4907bb80c81b945b3567capplicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="ccc4360c2bc44dfb30f2aa4f0ecf033e">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_account&#34;&gt;entry_account&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_account&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_account details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="ccc4360c2bc44dfb30f2aa4f0ecf033e">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_account</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="54c5c001-9844-4c82-b89d-338578f5860d" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="type_account_anchor" class="datatype" aria-labelledby="type_account">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_account">account</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_account" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="type_entry_account_anchor" class="datatype" aria-labelledby="type_entry_account">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_account">entry_account</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_account" class="js-tooltip-content" >
+
+	
+
+
+
+<a href="#type_account">account</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_account">
+	<span class="sr-only">account details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_account_1aebbf67876315591588612cf6687ac4" class="definition-example__title"><span>entry_account</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_account_1aebbf67876315591588612cf6687ac4">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">Account_hk=</span><span class="s">&#34;c41add98e452e2d672f649ca6cc06ebe&#34;</span> <span class="na">Company_x0020_No=</span><span class="s">&#34;110&#34;</span> <span class="na">Company_x0020_Area_x0020_No=</span><span class="s">&#34;1000&#34;</span> <span class="na">Branch_x0020_No=</span><span class="s">&#34;1010&#34;</span> <span class="na">Account_x0020_Plan=</span><span class="s">&#34;YCOA&#34;</span> <span class="na">Consolid_x0020_Account_x0020_No=</span><span class="s">&#34;111100&#34;</span> <span class="na">Account_id=</span><span class="s">&#34;110_1010_YCOA_10010000&#34;</span> <span class="na">Account_x0020_No=</span><span class="s">&#34;10010000&#34;</span> <span class="na">Account_x0020_Text=</span><span class="s">&#34;Petty Cash&#34;</span> <span class="na">Account_x0020_Class=</span><span class="s">&#34;1&#34;</span> <span class="na">Account_x0020_Class_x0020_Text=</span><span class="s">&#34;B_BILANZ&#34;</span> <span class="na">Acceptance_x0020_Cn=</span><span class="s">&#34;N&#34;</span> <span class="na">Acceptance_x0020_Gr=</span><span class="s">&#34;10010000&#34;</span> <span class="na">Account_x0020_Type=</span><span class="s">&#34;FIN.&#34;</span> <span class="na">Account_x0020_Category=</span><span class="s">&#34;FI&#34;</span> <span class="na">Liquidity_x0020_Cn=</span><span class="s">&#34;N&#34;</span> <span class="na">Overdraft=</span><span class="s">&#34;0.00&#34;</span> <span class="na">Creation_x0020_Year=</span><span class="s">&#34;2&#34;</span> <span class="na">rec_Load_ts=</span><span class="s">&#34;2023-03-30T13:23:06.713&#34;</span> <span class="na">rec_SourceSystem_str=</span><span class="s">&#34;SAP&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="type_calendar_anchor" class="datatype" aria-labelledby="type_calendar">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_calendar">calendar</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_calendar" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="type_entry_calendar_anchor" class="datatype" aria-labelledby="type_entry_calendar">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_calendar">entry_calendar</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_calendar" class="js-tooltip-content" >
+
+	
+
+
+
+<a href="#type_calendar">calendar</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_calendar">
+	<span class="sr-only">calendar details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_calendar_18fbc68b826615115e5fa876737946ca" class="definition-example__title"><span>entry_calendar</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_calendar_18fbc68b826615115e5fa876737946ca">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">Calendar_hk=</span><span class="s">&#34;000eff92bb9e1969710c72c5bac2de03&#34;</span> <span class="na">Date=</span><span class="s">&#34;2021-01-02T00:00:00&#34;</span> <span class="na">Date_int=</span><span class="s">&#34;20210102&#34;</span> <span class="na">Week=</span><span class="s">&#34;1&#34;</span> <span class="na">Year=</span><span class="s">&#34;2021&#34;</span> <span class="na">Month_num=</span><span class="s">&#34;1&#34;</span> <span class="na">Day=</span><span class="s">&#34;2&#34;</span> <span class="na">Quarter_num=</span><span class="s">&#34;1&#34;</span> <span class="na">HalfYear_num=</span><span class="s">&#34;1&#34;</span> <span class="na">Weekday_num=</span><span class="s">&#34;6&#34;</span> <span class="na">Weekday=</span><span class="s">&#34;Saturday&#34;</span> <span class="na">Month=</span><span class="s">&#34;January&#34;</span> <span class="na">Quarter=</span><span class="s">&#34;1. Quarter&#34;</span> <span class="na">Half_x0020_Year=</span><span class="s">&#34;1. HalfYear&#34;</span> <span class="na">Workday=</span><span class="s">&#34;0&#34;</span> <span class="na">rec_Load_ts=</span><span class="s">&#34;2023-06-07T10:20:56.823&#34;</span> <span class="na">rec_SourceSystem_str=</span><span class="s">&#34;CORE&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="type_costcenter_anchor" class="datatype" aria-labelledby="type_costcenter">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_costcenter">costcenter</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_costcenter" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="type_entry_costcenter_anchor" class="datatype" aria-labelledby="type_entry_costcenter">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_costcenter">entry_costcenter</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_costcenter" class="js-tooltip-content" >
+
+	
+
+
+
+<a href="#type_costcenter">costcenter</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_costcenter">
+	<span class="sr-only">costcenter details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_costcenter_68c17a16488b5fc566e9173a8b75f612" class="definition-example__title"><span>entry_costcenter</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_costcenter_68c17a16488b5fc566e9173a8b75f612">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">CostCentreHK=</span><span class="s">&#34;c4ca4238a0b923820dcc509a6f75849b&#34;</span> <span class="na">CostCentreID=</span><span class="s">&#34;1&#34;</span> <span class="na">CostCentre=</span><span class="s">&#34;Austria&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="type_department_anchor" class="datatype" aria-labelledby="type_department">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_department">department</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_department" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="type_entry_department_anchor" class="datatype" aria-labelledby="type_entry_department">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_department">entry_department</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_department" class="js-tooltip-content" >
+
+	
+
+
+
+<a href="#type_department">department</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_department">
+	<span class="sr-only">department details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_department_ff89eb8157264686c3116aa7c815567b" class="definition-example__title"><span>entry_department</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_department_ff89eb8157264686c3116aa7c815567b">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">DepartmentHK=</span><span class="s">&#34;a87ff679a2f3e71d9181a67b7542122c&#34;</span> <span class="na">DepartmentID=</span><span class="s">&#34;4&#34;</span> <span class="na">Department=</span><span class="s">&#34;Operations&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="type_employee_anchor" class="datatype" aria-labelledby="type_employee">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_employee">employee</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_employee" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="type_entry_employee_anchor" class="datatype" aria-labelledby="type_entry_employee">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_employee">entry_employee</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_employee" class="js-tooltip-content" >
+
+	
+
+
+
+<a href="#type_employee">employee</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_employee">
+	<span class="sr-only">employee details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_employee_eac6a6bf67118869865525b417713f8c" class="definition-example__title"><span>entry_employee</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_employee_eac6a6bf67118869865525b417713f8c">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">EmployeeSK=</span><span class="s">&#34;9060&#34;</span> <span class="na">EmployeeHK=</span><span class="s">&#34;20c097b913a26ba121cd74da10e7558f&#34;</span> <span class="na">EmployeeNumber=</span><span class="s">&#34;BC7249&#34;</span> <span class="na">EntryDate=</span><span class="s">&#34;2023-02-01T00:00:00&#34;</span> <span class="na">CompanyRegNo=</span><span class="s">&#34;HICO.00002&#34;</span> <span class="na">CompanyName=</span><span class="s">&#34;HICO Demo &#34;</span> <span class="na">FirstNames=</span><span class="s">&#34;Baby&#34;</span> <span class="na">Surname=</span><span class="s">&#34;Thibela&#34;</span> <span class="na">CurrentEmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">MaritalStatus=</span><span class="s">&#34;Single / Never Married&#34;</span> <span class="na">EmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">CurrentStatusEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">Race=</span><span class="s">&#34;Coloured&#34;</span> <span class="na">Gender=</span><span class="s">&#34;Male&#34;</span> <span class="na">Nationality=</span><span class="s">&#34;ZAF&#34;</span> <span class="na">ForeignNational=</span><span class="s">&#34;National&#34;</span> <span class="na">DateOfBirth=</span><span class="s">&#34;1970-06-05T00:00:00&#34;</span> <span class="na">JobGrade=</span><span class="s">&#34;Entry-level&#34;</span> <span class="na">JobGradeHK=</span><span class="s">&#34;c4ca4238a0b923820dcc509a6f75849b&#34;</span> <span class="na">JobGradeEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">JobTitle=</span><span class="s">&#34;Clerk&#34;</span> <span class="na">JobTitleEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">OccupationalLevel=</span><span class="s">&#34;Unskilled &amp;amp; Defined Decision Makers&#34;</span> <span class="na">OccupationalCatagory=</span><span class="s">&#34;Service and Sales Workers&#34;</span> <span class="na">CostCentre=</span><span class="s">&#34;Germany&#34;</span> <span class="na">CostCentreHK=</span><span class="s">&#34;c81e728d9d4c2f636f067f89cc14862c&#34;</span> <span class="na">CostCentreEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">Department=</span><span class="s">&#34;Marketing &amp;amp; Sales&#34;</span> <span class="na">DepartmentHK=</span><span class="s">&#34;c81e728d9d4c2f636f067f89cc14862c&#34;</span> <span class="na">DepartmentEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">EmploymentType=</span><span class="s">&#34;Temporary&#34;</span> <span class="na">ExitDate=</span><span class="s">&#34;9999-12-31T00:00:00&#34;</span> <span class="na">ContractDate=</span><span class="s">&#34;2023-02-26T00:00:00&#34;</span> <span class="na">ExitDateHK=</span><span class="s">&#34;2f4e01157c1afb7db9137fbc27dc9f09&#34;</span> <span class="na">ContractDateHK=</span><span class="s">&#34;4a153d17df87bc956ba907b15e68b7cb&#34;</span> <span class="na">IntervalFromDate=</span><span class="s">&#34;2023-02-01T00:00:00&#34;</span> <span class="na">Hashdiff=</span><span class="s">&#34;3d6a5cae11570d5bc416e5e46cfe35aa&#34;</span> <span class="na">scd_start=</span><span class="s">&#34;2023-02-26T00:00:00&#34;</span> <span class="na">scd_version=</span><span class="s">&#34;2&#34;</span> <span class="na">scd_active=</span><span class="s">&#34;1&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="type_grade_anchor" class="datatype" aria-labelledby="type_grade">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_grade">grade</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_grade" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="type_entry_grade_anchor" class="datatype" aria-labelledby="type_entry_grade">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_grade">entry_grade</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_grade" class="js-tooltip-content" >
+
+	
+
+
+
+<a href="#type_grade">grade</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_grade">
+	<span class="sr-only">grade details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_grade_19c6fa557673cb6e1876f6b418518a82" class="definition-example__title"><span>entry_grade</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_grade_19c6fa557673cb6e1876f6b418518a82">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">JobGradeHK=</span><span class="s">&#34;1679091c5a880faf6fb5e6087eb1b2dc&#34;</span> <span class="na">JobGradeID=</span><span class="s">&#34;6&#34;</span> <span class="na">JobGrade=</span><span class="s">&#34;Senior Management&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="type_salary_anchor" class="datatype" aria-labelledby="type_salary">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_salary">salary</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_salary" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="type_entry_salary_anchor" class="datatype" aria-labelledby="type_entry_salary">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_entry_salary">entry_salary</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_entry_salary" class="js-tooltip-content" >
+
+	
+
+
+
+<a href="#type_salary">salary</a>
+<button type="button" class="btn--naked tooltip js-tooltip-trigger" aria-expanded="false" aria-haspopup="true" aria-controls="tooltip_type_salary">
+	<span class="sr-only">salary details</span>
+	<svg class="tooltip__icon" viewBox="0 0 16 16" aria-hidden="true"><g><path d="M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z"></path></g></svg>
+</button>
+</div>
+
+<div class="definition-example">
+				<div id="type_entry_salary_5a61167f6e695f3c74726851c8b8a8b1" class="definition-example__title"><span>entry_salary</span></div>
+				<div role="region" tabindex="0" class="code-container" aria-labelledby="type_entry_salary_5a61167f6e695f3c74726851c8b8a8b1">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">EmployeeSK=</span><span class="s">&#34;1018&#34;</span> <span class="na">EmployeeHK=</span><span class="s">&#34;55507ef387f98cdb7edafe7fa0bdd77f&#34;</span> <span class="na">EmployeeNumber=</span><span class="s">&#34;BC2649&#34;</span> <span class="na">IntervalFromDateHK=</span><span class="s">&#34;9630953f8423d4587a7b88896f72598f&#34;</span> <span class="na">IntervalFromDate=</span><span class="s">&#34;2020-10-01T00:00:00&#34;</span> <span class="na">IntervalToDateHK=</span><span class="s">&#34;a712bd324387f05f8e63ed6462cc3f0b&#34;</span> <span class="na">IntervalToDate=</span><span class="s">&#34;2020-10-31T00:00:00&#34;</span> <span class="na">TaxYear=</span><span class="s">&#34;2021&#34;</span> <span class="na">CompanyRegNo=</span><span class="s">&#34;HICO.00002&#34;</span> <span class="na">NormalCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalPackageValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGrossCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalNettPay=</span><span class="s">&#34;3059.10&#34;</span> <span class="na">TotalCostToCompany=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalOvertimeHours=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalOvertimeValue=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalNormalTimeHours=</span><span class="s">&#34;173.36&#34;</span> <span class="na">TotalNormalTimeValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalBonuses=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupIncome=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGroupOccasional=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupDeductions=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalGroupStatutory=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalEmployeesTax=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalTaxAbatements=</span><span class="s">&#34;-30.90&#34;</span> <span class="na">TotalUIF=</span><span class="s">&#34;61.80&#34;</span> <span class="na">TotalSDL=</span><span class="s">&#34;30.90&#34;</span> <span class="na">UIFRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">SDLRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">OIDARemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+			</div>
+</div>
+	</div>
+</section>
+
+
+<section id="operation_getcalendars_anchor" class="operation" aria-labelledby="operation_getcalendars">
+	<div class="operation__content">
+        <h3 id="operation_getcalendars">getCalendars</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getDimensions/Calendars</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_59b95287e18b404353bb8cbe680c7c4fapplicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="203ae3600c33ccedcccb24ffa40b4f4f">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_calendar&#34;&gt;entry_calendar&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_calendar&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_calendar details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="203ae3600c33ccedcccb24ffa40b4f4f">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_calendar</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_59b95287e18b404353bb8cbe680c7c4fapplicationxml" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/xml</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_59b95287e18b404353bb8cbe680c7c4fapplicationxml">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;calendars&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">Calendar_hk=</span><span class="s">&#34;000eff92bb9e1969710c72c5bac2de03&#34;</span> <span class="na">Date=</span><span class="s">&#34;2021-01-02T00:00:00&#34;</span> <span class="na">Date_int=</span><span class="s">&#34;20210102&#34;</span> <span class="na">Week=</span><span class="s">&#34;1&#34;</span> <span class="na">Year=</span><span class="s">&#34;2021&#34;</span> <span class="na">Month_num=</span><span class="s">&#34;1&#34;</span> <span class="na">Day=</span><span class="s">&#34;2&#34;</span> <span class="na">Quarter_num=</span><span class="s">&#34;1&#34;</span> <span class="na">HalfYear_num=</span><span class="s">&#34;1&#34;</span> <span class="na">Weekday_num=</span><span class="s">&#34;6&#34;</span> <span class="na">Weekday=</span><span class="s">&#34;Saturday&#34;</span> <span class="na">Month=</span><span class="s">&#34;January&#34;</span> <span class="na">Quarter=</span><span class="s">&#34;1. Quarter&#34;</span> <span class="na">Half_x0020_Year=</span><span class="s">&#34;1. HalfYear&#34;</span> <span class="na">Workday=</span><span class="s">&#34;0&#34;</span> <span class="na">rec_Load_ts=</span><span class="s">&#34;2023-06-07T10:20:56.823&#34;</span> <span class="na">rec_SourceSystem_str=</span><span class="s">&#34;CORE&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">Calendar_hk=</span><span class="s">&#34;000eff92bb9e1969710c72c5bac2de03&#34;</span> <span class="na">Date=</span><span class="s">&#34;2021-01-02T00:00:00&#34;</span> <span class="na">Date_int=</span><span class="s">&#34;20210102&#34;</span> <span class="na">Week=</span><span class="s">&#34;1&#34;</span> <span class="na">Year=</span><span class="s">&#34;2021&#34;</span> <span class="na">Month_num=</span><span class="s">&#34;1&#34;</span> <span class="na">Day=</span><span class="s">&#34;2&#34;</span> <span class="na">Quarter_num=</span><span class="s">&#34;1&#34;</span> <span class="na">HalfYear_num=</span><span class="s">&#34;1&#34;</span> <span class="na">Weekday_num=</span><span class="s">&#34;6&#34;</span> <span class="na">Weekday=</span><span class="s">&#34;Saturday&#34;</span> <span class="na">Month=</span><span class="s">&#34;January&#34;</span> <span class="na">Quarter=</span><span class="s">&#34;1. Quarter&#34;</span> <span class="na">Half_x0020_Year=</span><span class="s">&#34;1. HalfYear&#34;</span> <span class="na">Workday=</span><span class="s">&#34;0&#34;</span> <span class="na">rec_Load_ts=</span><span class="s">&#34;2023-06-07T10:20:56.823&#34;</span> <span class="na">rec_SourceSystem_str=</span><span class="s">&#34;CORE&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/calendars&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="0e945b02-2797-400a-be22-6467e8cf11bf" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_getcostcenters_anchor" class="operation" aria-labelledby="operation_getcostcenters">
+	<div class="operation__content">
+        <h3 id="operation_getcostcenters">getCostcenters</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getDimensions/Costcenters</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_0c7cb4b94b0e56c29b35e813b4f85887applicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="040c2fa3ea34fbc4e2c34c6dcbf00c3f">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_costcenter&#34;&gt;entry_costcenter&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_costcenter&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_costcenter details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="040c2fa3ea34fbc4e2c34c6dcbf00c3f">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_costcenter</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_0c7cb4b94b0e56c29b35e813b4f85887applicationxml" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/xml</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_0c7cb4b94b0e56c29b35e813b4f85887applicationxml">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;costcenters&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">CostCentreHK=</span><span class="s">&#34;c4ca4238a0b923820dcc509a6f75849b&#34;</span> <span class="na">CostCentreID=</span><span class="s">&#34;1&#34;</span> <span class="na">CostCentre=</span><span class="s">&#34;Austria&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">CostCentreHK=</span><span class="s">&#34;c4ca4238a0b923820dcc509a6f75849b&#34;</span> <span class="na">CostCentreID=</span><span class="s">&#34;1&#34;</span> <span class="na">CostCentre=</span><span class="s">&#34;Austria&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">CostCentreHK=</span><span class="s">&#34;c4ca4238a0b923820dcc509a6f75849b&#34;</span> <span class="na">CostCentreID=</span><span class="s">&#34;1&#34;</span> <span class="na">CostCentre=</span><span class="s">&#34;Austria&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/costcenters&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="1e4fad66-00b9-4da9-9201-0840fa0a8315" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_getdepartments_anchor" class="operation" aria-labelledby="operation_getdepartments">
+	<div class="operation__content">
+        <h3 id="operation_getdepartments">getDepartments</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getDimensions/Departments</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_84b457e8b59f547893bc08b0e1b3c2c6applicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="200f42bc6ecf3f4c33afd44ca0eb03cc">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_department&#34;&gt;entry_department&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_department&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_department details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="200f42bc6ecf3f4c33afd44ca0eb03cc">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_department</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_84b457e8b59f547893bc08b0e1b3c2c6applicationxml" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/xml</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_84b457e8b59f547893bc08b0e1b3c2c6applicationxml">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;departments&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">DepartmentHK=</span><span class="s">&#34;a87ff679a2f3e71d9181a67b7542122c&#34;</span> <span class="na">DepartmentID=</span><span class="s">&#34;4&#34;</span> <span class="na">Department=</span><span class="s">&#34;Operations&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">DepartmentHK=</span><span class="s">&#34;a87ff679a2f3e71d9181a67b7542122c&#34;</span> <span class="na">DepartmentID=</span><span class="s">&#34;4&#34;</span> <span class="na">Department=</span><span class="s">&#34;Operations&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/departments&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="cfa2c36b-f716-4ced-a296-58991adae5f5" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_getemployees_anchor" class="operation" aria-labelledby="operation_getemployees">
+	<div class="operation__content">
+        <h3 id="operation_getemployees">getEmployees</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getDimensions/Employees</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_4b65387bb7483298480ecbc0e9f55b1capplicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="c20acfe00caefb4d43f062bfcc4c3343">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_employee&#34;&gt;entry_employee&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_employee&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_employee details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="c20acfe00caefb4d43f062bfcc4c3343">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_employee</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_4b65387bb7483298480ecbc0e9f55b1capplicationxml" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/xml</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_4b65387bb7483298480ecbc0e9f55b1capplicationxml">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;employees&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">EmployeeSK=</span><span class="s">&#34;9060&#34;</span> <span class="na">EmployeeHK=</span><span class="s">&#34;20c097b913a26ba121cd74da10e7558f&#34;</span> <span class="na">EmployeeNumber=</span><span class="s">&#34;BC7249&#34;</span> <span class="na">EntryDate=</span><span class="s">&#34;2023-02-01T00:00:00&#34;</span> <span class="na">CompanyRegNo=</span><span class="s">&#34;HICO.00002&#34;</span> <span class="na">CompanyName=</span><span class="s">&#34;HICO Demo &#34;</span> <span class="na">FirstNames=</span><span class="s">&#34;Baby&#34;</span> <span class="na">Surname=</span><span class="s">&#34;Thibela&#34;</span> <span class="na">CurrentEmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">MaritalStatus=</span><span class="s">&#34;Single / Never Married&#34;</span> <span class="na">EmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">CurrentStatusEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">Race=</span><span class="s">&#34;Coloured&#34;</span> <span class="na">Gender=</span><span class="s">&#34;Male&#34;</span> <span class="na">Nationality=</span><span class="s">&#34;ZAF&#34;</span> <span class="na">ForeignNational=</span><span class="s">&#34;National&#34;</span> <span class="na">DateOfBirth=</span><span class="s">&#34;1970-06-05T00:00:00&#34;</span> <span class="na">JobGrade=</span><span class="s">&#34;Entry-level&#34;</span> <span class="na">JobGradeHK=</span><span class="s">&#34;c4ca4238a0b923820dcc509a6f75849b&#34;</span> <span class="na">JobGradeEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">JobTitle=</span><span class="s">&#34;Clerk&#34;</span> <span class="na">JobTitleEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">OccupationalLevel=</span><span class="s">&#34;Unskilled &amp;amp; Defined Decision Makers&#34;</span> <span class="na">OccupationalCatagory=</span><span class="s">&#34;Service and Sales Workers&#34;</span> <span class="na">CostCentre=</span><span class="s">&#34;Germany&#34;</span> <span class="na">CostCentreHK=</span><span class="s">&#34;c81e728d9d4c2f636f067f89cc14862c&#34;</span> <span class="na">CostCentreEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">Department=</span><span class="s">&#34;Marketing &amp;amp; Sales&#34;</span> <span class="na">DepartmentHK=</span><span class="s">&#34;c81e728d9d4c2f636f067f89cc14862c&#34;</span> <span class="na">DepartmentEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">EmploymentType=</span><span class="s">&#34;Temporary&#34;</span> <span class="na">ExitDate=</span><span class="s">&#34;9999-12-31T00:00:00&#34;</span> <span class="na">ContractDate=</span><span class="s">&#34;2023-02-26T00:00:00&#34;</span> <span class="na">ExitDateHK=</span><span class="s">&#34;2f4e01157c1afb7db9137fbc27dc9f09&#34;</span> <span class="na">ContractDateHK=</span><span class="s">&#34;4a153d17df87bc956ba907b15e68b7cb&#34;</span> <span class="na">IntervalFromDate=</span><span class="s">&#34;2023-02-01T00:00:00&#34;</span> <span class="na">Hashdiff=</span><span class="s">&#34;3d6a5cae11570d5bc416e5e46cfe35aa&#34;</span> <span class="na">scd_start=</span><span class="s">&#34;2023-02-26T00:00:00&#34;</span> <span class="na">scd_version=</span><span class="s">&#34;2&#34;</span> <span class="na">scd_active=</span><span class="s">&#34;1&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">EmployeeSK=</span><span class="s">&#34;9060&#34;</span> <span class="na">EmployeeHK=</span><span class="s">&#34;20c097b913a26ba121cd74da10e7558f&#34;</span> <span class="na">EmployeeNumber=</span><span class="s">&#34;BC7249&#34;</span> <span class="na">EntryDate=</span><span class="s">&#34;2023-02-01T00:00:00&#34;</span> <span class="na">CompanyRegNo=</span><span class="s">&#34;HICO.00002&#34;</span> <span class="na">CompanyName=</span><span class="s">&#34;HICO Demo &#34;</span> <span class="na">FirstNames=</span><span class="s">&#34;Baby&#34;</span> <span class="na">Surname=</span><span class="s">&#34;Thibela&#34;</span> <span class="na">CurrentEmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">MaritalStatus=</span><span class="s">&#34;Single / Never Married&#34;</span> <span class="na">EmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">CurrentStatusEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">Race=</span><span class="s">&#34;Coloured&#34;</span> <span class="na">Gender=</span><span class="s">&#34;Male&#34;</span> <span class="na">Nationality=</span><span class="s">&#34;ZAF&#34;</span> <span class="na">ForeignNational=</span><span class="s">&#34;National&#34;</span> <span class="na">DateOfBirth=</span><span class="s">&#34;1970-06-05T00:00:00&#34;</span> <span class="na">JobGrade=</span><span class="s">&#34;Entry-level&#34;</span> <span class="na">JobGradeHK=</span><span class="s">&#34;c4ca4238a0b923820dcc509a6f75849b&#34;</span> <span class="na">JobGradeEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">JobTitle=</span><span class="s">&#34;Clerk&#34;</span> <span class="na">JobTitleEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">OccupationalLevel=</span><span class="s">&#34;Unskilled &amp;amp; Defined Decision Makers&#34;</span> <span class="na">OccupationalCatagory=</span><span class="s">&#34;Service and Sales Workers&#34;</span> <span class="na">CostCentre=</span><span class="s">&#34;Germany&#34;</span> <span class="na">CostCentreHK=</span><span class="s">&#34;c81e728d9d4c2f636f067f89cc14862c&#34;</span> <span class="na">CostCentreEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">Department=</span><span class="s">&#34;Marketing &amp;amp; Sales&#34;</span> <span class="na">DepartmentHK=</span><span class="s">&#34;c81e728d9d4c2f636f067f89cc14862c&#34;</span> <span class="na">DepartmentEffectiveDate=</span><span class="s">&#34;26/02/2023&#34;</span> <span class="na">EmploymentType=</span><span class="s">&#34;Temporary&#34;</span> <span class="na">ExitDate=</span><span class="s">&#34;9999-12-31T00:00:00&#34;</span> <span class="na">ContractDate=</span><span class="s">&#34;2023-02-26T00:00:00&#34;</span> <span class="na">ExitDateHK=</span><span class="s">&#34;2f4e01157c1afb7db9137fbc27dc9f09&#34;</span> <span class="na">ContractDateHK=</span><span class="s">&#34;4a153d17df87bc956ba907b15e68b7cb&#34;</span> <span class="na">IntervalFromDate=</span><span class="s">&#34;2023-02-01T00:00:00&#34;</span> <span class="na">Hashdiff=</span><span class="s">&#34;3d6a5cae11570d5bc416e5e46cfe35aa&#34;</span> <span class="na">scd_start=</span><span class="s">&#34;2023-02-26T00:00:00&#34;</span> <span class="na">scd_version=</span><span class="s">&#34;2&#34;</span> <span class="na">scd_active=</span><span class="s">&#34;1&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/employees&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="4e71284d-961e-46bd-b401-4129a76a58ef" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_getgrades_anchor" class="operation" aria-labelledby="operation_getgrades">
+	<div class="operation__content">
+        <h3 id="operation_getgrades">getGrades</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getDimensions/Grades</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_6b83b3cf45e519749c0885cb8e2bb407applicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="0f36c4b24ecbdf0a34a30cf243cfc0ec">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_grade&#34;&gt;entry_grade&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_grade&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_grade details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="0f36c4b24ecbdf0a34a30cf243cfc0ec">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_grade</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_6b83b3cf45e519749c0885cb8e2bb407applicationxml" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/xml</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_6b83b3cf45e519749c0885cb8e2bb407applicationxml">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;grades&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">JobGradeHK=</span><span class="s">&#34;1679091c5a880faf6fb5e6087eb1b2dc&#34;</span> <span class="na">JobGradeID=</span><span class="s">&#34;6&#34;</span> <span class="na">JobGrade=</span><span class="s">&#34;Senior Management&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">JobGradeHK=</span><span class="s">&#34;1679091c5a880faf6fb5e6087eb1b2dc&#34;</span> <span class="na">JobGradeID=</span><span class="s">&#34;6&#34;</span> <span class="na">JobGrade=</span><span class="s">&#34;Senior Management&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/grades&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="da593950-f72b-42dc-b714-7aaaa6f24efc" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="operation_getsalary_anchor" class="operation" aria-labelledby="operation_getsalary">
+	<div class="operation__content">
+        <h3 id="operation_getsalary">getSalary</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getDimensions/Salaries</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_4c65007b8bf831e9c45b895bb4327c8eapplicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="444c0bacaefcc42026e33bfffc0c3d30">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_entry_salary&#34;&gt;entry_salary&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_entry_salary&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;entry_salary details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="444c0bacaefcc42026e33bfffc0c3d30">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      entry_salary</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_4c65007b8bf831e9c45b895bb4327c8eapplicationxml" class="definition-example__title">
+            <span>Status 200</span><span class="definition-example__mimetype">
+                    application/xml</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_4c65007b8bf831e9c45b895bb4327c8eapplicationxml">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;salaries&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">EmployeeSK=</span><span class="s">&#34;1018&#34;</span> <span class="na">EmployeeHK=</span><span class="s">&#34;55507ef387f98cdb7edafe7fa0bdd77f&#34;</span> <span class="na">EmployeeNumber=</span><span class="s">&#34;BC2649&#34;</span> <span class="na">IntervalFromDateHK=</span><span class="s">&#34;9630953f8423d4587a7b88896f72598f&#34;</span> <span class="na">IntervalFromDate=</span><span class="s">&#34;2020-10-01T00:00:00&#34;</span> <span class="na">IntervalToDateHK=</span><span class="s">&#34;a712bd324387f05f8e63ed6462cc3f0b&#34;</span> <span class="na">IntervalToDate=</span><span class="s">&#34;2020-10-31T00:00:00&#34;</span> <span class="na">TaxYear=</span><span class="s">&#34;2021&#34;</span> <span class="na">CompanyRegNo=</span><span class="s">&#34;HICO.00002&#34;</span> <span class="na">NormalCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalPackageValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGrossCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalNettPay=</span><span class="s">&#34;3059.10&#34;</span> <span class="na">TotalCostToCompany=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalOvertimeHours=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalOvertimeValue=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalNormalTimeHours=</span><span class="s">&#34;173.36&#34;</span> <span class="na">TotalNormalTimeValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalBonuses=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupIncome=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGroupOccasional=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupDeductions=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalGroupStatutory=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalEmployeesTax=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalTaxAbatements=</span><span class="s">&#34;-30.90&#34;</span> <span class="na">TotalUIF=</span><span class="s">&#34;61.80&#34;</span> <span class="na">TotalSDL=</span><span class="s">&#34;30.90&#34;</span> <span class="na">UIFRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">SDLRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">OIDARemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;row</span> <span class="na">EmployeeSK=</span><span class="s">&#34;1018&#34;</span> <span class="na">EmployeeHK=</span><span class="s">&#34;55507ef387f98cdb7edafe7fa0bdd77f&#34;</span> <span class="na">EmployeeNumber=</span><span class="s">&#34;BC2649&#34;</span> <span class="na">IntervalFromDateHK=</span><span class="s">&#34;9630953f8423d4587a7b88896f72598f&#34;</span> <span class="na">IntervalFromDate=</span><span class="s">&#34;2020-10-01T00:00:00&#34;</span> <span class="na">IntervalToDateHK=</span><span class="s">&#34;a712bd324387f05f8e63ed6462cc3f0b&#34;</span> <span class="na">IntervalToDate=</span><span class="s">&#34;2020-10-31T00:00:00&#34;</span> <span class="na">TaxYear=</span><span class="s">&#34;2021&#34;</span> <span class="na">CompanyRegNo=</span><span class="s">&#34;HICO.00002&#34;</span> <span class="na">NormalCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalPackageValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGrossCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalNettPay=</span><span class="s">&#34;3059.10&#34;</span> <span class="na">TotalCostToCompany=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalOvertimeHours=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalOvertimeValue=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalNormalTimeHours=</span><span class="s">&#34;173.36&#34;</span> <span class="na">TotalNormalTimeValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalBonuses=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupIncome=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGroupOccasional=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupDeductions=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalGroupStatutory=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalEmployeesTax=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalTaxAbatements=</span><span class="s">&#34;-30.90&#34;</span> <span class="na">TotalUIF=</span><span class="s">&#34;61.80&#34;</span> <span class="na">TotalSDL=</span><span class="s">&#34;30.90&#34;</span> <span class="na">UIFRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">SDLRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">OIDARemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/salaries&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="36eb9a25-afbd-460a-bf0b-0cbf9f686bbb" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="type_balance_anchor" class="datatype" aria-labelledby="type_balance">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_balance">balance</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_balance" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="operation_getbalance_anchor" class="operation" aria-labelledby="operation_getbalance">
+	<div class="operation__content">
+        <h3 id="operation_getbalance">getBalance</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getFacts/Balance</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_cb1785bc3f530c2b4e44be8b58796089applicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="24ccceaf04b0003fc4cea2f46f3c3bd3">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_bilance&#34;&gt;bilance&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_bilance&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;bilance details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="24ccceaf04b0003fc4cea2f46f3c3bd3">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      bilance</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_cb1785bc3f530c2b4e44be8b58796089applicationjson" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_cb1785bc3f530c2b4e44be8b58796089applicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">&lt;fact&gt;&lt;row</span> <span class="err">Schema_hk=</span><span class="s2">&#34;9d8b572681dd1c0798df20cbf08fd662&#34;</span> <span class="err">Schema=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Company_hk=</span><span class="s2">&#34;a87fdcf6948095213d6d2737659d64e7&#34;</span> <span class="err">Date_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Period=</span><span class="s2">&#34;202101&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;Y&#34;</span> <span class="err">Balance_x</span><span class="mi">0020</span><span class="err">_Carried_x</span><span class="mi">0020</span><span class="err">_Forward=</span><span class="s2">&#34;-35119.96&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_begin_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Debit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Credit=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;-35119.96&#34;</span> <span class="err">Balance=</span><span class="s2">&#34;-35119.96&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Monthly_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Gr_x</span><span class="mi">0020</span><span class="err">_Balance=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Cc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;USD&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;CHF&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Cc_x</span><span class="mi">0020</span><span class="err">_Gc=</span><span class="s2">&#34;1.00000&#34;</span> <span class="err">Exchange_x</span><span class="mi">0020</span><span class="err">_Rate_x</span><span class="mi">0020</span><span class="err">_Gc_x</span><span class="mi">0020</span><span class="err">_Coc=</span><span class="s2">&#34;0.00000&#34;</span> <span class="err">Currency_x</span><span class="mi">0020</span><span class="err">_Dim=</span><span class="s2">&#34;1&#34;</span> <span class="err">Calendar_hk=</span><span class="s2">&#34;56acd4f269bafddc3987c14f4881bb54&#34;</span> <span class="err">Date_int=</span><span class="s2">&#34;20210131&#34;</span> <span class="err">Week=</span><span class="s2">&#34;6&#34;</span> <span class="err">Month_num=</span><span class="s2">&#34;1&#34;</span> <span class="err">Day=</span><span class="s2">&#34;31&#34;</span> <span class="err">Quarter_num=</span><span class="s2">&#34;1&#34;</span> <span class="err">HalfYear_num=</span><span class="s2">&#34;1&#34;</span> <span class="err">Weekday_num=</span><span class="s2">&#34;7&#34;</span> <span class="err">Weekday=</span><span class="s2">&#34;Sunday&#34;</span> <span class="err">Quarter=</span><span class="s2">&#34;1. Quarter&#34;</span> <span class="err">Half_x</span><span class="mi">0020</span><span class="err">_Year=</span><span class="s2">&#34;1. HalfYear&#34;</span> <span class="err">Account_hk=</span><span class="s2">&#34;0&#34;</span> <span class="err">Company_x</span><span class="mi">0020</span><span class="err">_Area_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;1000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Plan=</span><span class="s2">&#34;YCOA&#34;</span> <span class="err">Consolid_x</span><span class="mi">0020</span><span class="err">_Account_x</span><span class="mi">0020</span><span class="err">_No=</span><span class="s2">&#34;111100&#34;</span> <span class="err">Account_id=</span><span class="s2">&#34;110_1710_YCOA_11001000&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Text=</span><span class="s2">&#34;Bank 1 - Bank (Main) Account&#34;</span> <span class="err">Account_x</span><span class="mi">0020</span><span class="err">_Class_x</span><span class="mi">0020</span><span class="err">_Text=</span><span class="s2">&#34;B_BILANZ&#34;</span> <span class="err">Liquidity_x</span><span class="mi">0020</span><span class="err">_Cn=</span><span class="s2">&#34;N&#34;</span> <span class="err">Overdraft=</span><span class="s2">&#34;0.00&#34;</span> <span class="err">Creation_x</span><span class="mi">0020</span><span class="err">_Year=</span><span class="s2">&#34;2&#34;</span> <span class="err">/&gt;&lt;/fact&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="dde1f81d-7738-45b1-81f1-a8d54b3b971d" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="type_bilance_anchor" class="datatype" aria-labelledby="type_bilance">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_bilance">bilance</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_bilance" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="operation_getemployeespot_anchor" class="operation" aria-labelledby="operation_getemployeespot">
+	<div class="operation__content">
+        <h3 id="operation_getemployeespot">getEmployeeSPOT</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getFacts/Employee</span>
+	<div class="definition__content definition">
+			<div>
+				<h4>Request</h4>
+		
+
+
+
+<table>
+  <caption class="request__query-parameters">Query parameters</caption><thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">limit</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">100</pre></div>
+</td>
+</tr>
+
+      
+
+
+<tr class="request__parameter">
+	<th class="request__parameter-type-label" scope="row">offset</th>
+	<td class="wysiwyg"></td>
+	<td class="request__parameter-type">
+    <span class="parameter-type">
+      
+
+integer</span>
+<span class="badge">Optional</span></td>
+	<td class="request__parameter-attributes-examples">
+
+
+
+<div class="request__parameter-attribute-example">
+	<span class="metadata__label">Example</span><pre class="badge metadata__example">200</pre></div>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+		
+
+</div>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">2XX</span>Status 2XX</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/xml</span></div>
+</div>
+
+    <div id="body_c8eb89bb154c4339e8b826c47b00755fapplicationxml" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<table>
+  <caption class="data-type-title sr-only"> details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="response-body__parameter response-body__array-type-details">
+      <th class="response-body__parameter-type-label" scope="row" aria-describedby="04ccf443060dfca2a33c23cfbe4fb0ec">
+
+
+array of 
+
+
+
+&lt;a href=&#34;#type_employee_all&#34;&gt;employee_all&lt;/a&gt;
+&lt;button type=&#34;button&#34; class=&#34;btn--naked tooltip js-tooltip-trigger&#34; aria-expanded=&#34;false&#34; aria-haspopup=&#34;true&#34; aria-controls=&#34;tooltip_type_employee_all&#34;&gt;
+	&lt;span class=&#34;sr-only&#34;&gt;employee_all details&lt;/span&gt;
+	&lt;svg class=&#34;tooltip__icon&#34; viewBox=&#34;0 0 16 16&#34; aria-hidden=&#34;true&#34;&gt;&lt;g&gt;&lt;path d=&#34;M8,0 C12.418278,0 16,3.581722 16,8 C16,12.418278 12.418278,16 8,16 C3.581722,16 0,12.418278 0,8 C0,3.581722 3.581722,0 8,0 Z M7.88888889,6.11262338 C7.39796911,6.11262338 7,6.51059249 7,7.00151227 L7,11.4459567 C7,11.9368765 7.39796911,12.3348456 7.88888889,12.3348456 C8.37980867,12.3348456 8.77777778,11.9368765 8.77777778,11.4459567 L8.77777778,7.00151227 C8.77777778,6.51059249 8.37980867,6.11262338 7.88888889,6.11262338 Z M7.88888889,3.44293218 C7.39796911,3.44293218 7,3.84090129 7,4.33182107 C7,4.82274084 7.39796911,5.22070996 7.88888889,5.22070996 C8.37980867,5.22070996 8.77777778,4.82274084 8.77777778,4.33182107 C8.77777778,3.84090129 8.37980867,3.44293218 7.88888889,3.44293218 Z&#34;&gt;&lt;/path&gt;&lt;/g&gt;&lt;/svg&gt;
+&lt;/button&gt;
+
+
+      </th>
+      <td class="response-body__parameter-attributes-examples">
+
+
+<table id="04ccf443060dfca2a33c23cfbe4fb0ec">
+  <caption class="response-body-title sr-only">Datatype details</caption>
+  <thead class="sr-only">
+    <tr>
+      <th scope="col">Type</th>
+      <th scope="col">Description</th>
+      <th scope="col">Attributes and examples</th>
+    </tr>
+  </thead>
+  <tbody>
+<tr class="response-body__parameter response-body__array-first-type">
+      <th scope="row">array</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+  
+    
+
+</td>
+    </tr>
+<tr class="response-body__parameter array-parameter--description">
+      <th scope="row">
+      employee_all</th>
+      <td></td>
+      <td class="response-body__parameter-attributes-examples">
+
+
+
+</td>
+    </tr>
+  </tbody>
+</table>
+
+      </td>
+      <td colspan="2"></td>
+    </tr>
+  </tbody>
+</table>
+</div>
+        <div class="definition-example">
+        <div id="bodySample_c8eb89bb154c4339e8b826c47b00755fapplicationxml" class="definition-example__title">
+            <span>Status 2XX</span><span class="definition-example__mimetype">
+                    application/xml</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_c8eb89bb154c4339e8b826c47b00755fapplicationxml">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;row</span> <span class="na">EntryDate=</span><span class="s">&#34;2020-03-01T00:00:00&#34;</span> <span class="na">CompanyName=</span><span class="s">&#34;HICO Demo &#34;</span> <span class="na">FirstNames=</span><span class="s">&#34;Magomarele&#34;</span> <span class="na">Surname=</span><span class="s">&#34;Shetunyenga&#34;</span> <span class="na">CurrentEmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">MaritalStatus=</span><span class="s">&#34;Widowed&#34;</span> <span class="na">EmployeeStatus=</span><span class="s">&#34;Active&#34;</span> <span class="na">CurrentStatusEffectiveDate=</span><span class="s">&#34;27/03/2019&#34;</span> <span class="na">Race=</span><span class="s">&#34;Other&#34;</span> <span class="na">Gender=</span><span class="s">&#34;Female&#34;</span> <span class="na">Nationality=</span><span class="s">&#34;ZAF&#34;</span> <span class="na">ForeignNational=</span><span class="s">&#34;National&#34;</span> <span class="na">DateOfBirth=</span><span class="s">&#34;1968-12-31T00:00:00&#34;</span> <span class="na">JobGradeEffectiveDate=</span><span class="s">&#34;27/03/2019&#34;</span> <span class="na">JobTitle=</span><span class="s">&#34;Data Entry Clerk&#34;</span> <span class="na">JobTitleEffectiveDate=</span><span class="s">&#34;27/03/2019&#34;</span> <span class="na">OccupationalLevel=</span><span class="s">&#34;Unskilled &amp;amp; Defined Decision Makers&#34;</span> <span class="na">OccupationalCatagory=</span><span class="s">&#34;Service and Sales Workers&#34;</span> <span class="na">CostCentreEffectiveDate=</span><span class="s">&#34;27/03/2019&#34;</span> <span class="na">DepartmentEffectiveDate=</span><span class="s">&#34;27/03/2019&#34;</span> <span class="na">EmploymentType=</span><span class="s">&#34;Permanent&#34;</span> <span class="na">ExitDate=</span><span class="s">&#34;9999-12-31T00:00:00&#34;</span> <span class="na">ContractDate=</span><span class="s">&#34;2019-03-27T00:00:00&#34;</span> <span class="na">ExitDateHK=</span><span class="s">&#34;2f4e01157c1afb7db9137fbc27dc9f09&#34;</span> <span class="na">ContractDateHK=</span><span class="s">&#34;3ec4c2bd06a9c6dccf82fd1b5080c1a9&#34;</span> <span class="na">Hashdiff=</span><span class="s">&#34;d62812cf3c6f256b5dbcd9047114862b&#34;</span> <span class="na">scd_start=</span><span class="s">&#34;2020-03-01T00:00:00&#34;</span> <span class="na">scd_end=</span><span class="s">&#34;2022-01-05T00:00:00&#34;</span> <span class="na">scd_version=</span><span class="s">&#34;1&#34;</span> <span class="na">scd_active=</span><span class="s">&#34;0&#34;</span> <span class="na">CostCentreID=</span><span class="s">&#34;3&#34;</span> <span class="na">DepartmentID=</span><span class="s">&#34;2&#34;</span> <span class="na">JobGradeID=</span><span class="s">&#34;1&#34;</span> <span class="na">IntervalFromDateHK=</span><span class="s">&#34;9630953f8423d4587a7b88896f72598f&#34;</span> <span class="na">IntervalToDateHK=</span><span class="s">&#34;a712bd324387f05f8e63ed6462cc3f0b&#34;</span> <span class="na">IntervalToDate=</span><span class="s">&#34;2020-10-31T00:00:00&#34;</span> <span class="na">TaxYear=</span><span class="s">&#34;2021&#34;</span> <span class="na">NormalCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalPackageValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGrossCashPay=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalNettPay=</span><span class="s">&#34;3059.10&#34;</span> <span class="na">TotalCostToCompany=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalOvertimeHours=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalOvertimeValue=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalNormalTimeHours=</span><span class="s">&#34;173.36&#34;</span> <span class="na">TotalNormalTimeValue=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalBonuses=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupIncome=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">TotalGroupOccasional=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalGroupDeductions=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalGroupStatutory=</span><span class="s">&#34;30.90&#34;</span> <span class="na">TotalEmployeesTax=</span><span class="s">&#34;0.00&#34;</span> <span class="na">TotalTaxAbatements=</span><span class="s">&#34;-30.90&#34;</span> <span class="na">TotalUIF=</span><span class="s">&#34;61.80&#34;</span> <span class="na">TotalSDL=</span><span class="s">&#34;30.90&#34;</span> <span class="na">UIFRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">SDLRemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="na">OIDARemuneration=</span><span class="s">&#34;3090.00&#34;</span> <span class="nt">/&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="a42ca501-608d-4687-a306-43ddf6b9e0c8" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+
+
+<section id="type_employee_all_anchor" class="datatype" aria-labelledby="type_employee_all">
+	<div class="data-type__content">
+		<div class="data-type__header">
+			<h3 id="type_employee_all">employee_all</h3>
+		</div>
+		<div class="definition__data-type definition">
+			<div id="tooltip_type_employee_all" class="js-tooltip-content" >
+
+	
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+
+</div>
+	</div>
+</section>
+
+
+<section id="operation_test_op_anchor" class="operation" aria-labelledby="operation_test_op">
+	<div class="operation__content">
+        <h3 id="operation_test_op">Test_OP</h3>
+        <span class="operation--get operation--default">GET</span> <span class="operation__url">/getFacts/template</span>
+	<div class="definition__content definition">
+			<h4>Response</h4>
+		
+		
+				
+					
+
+<div class="response">
+	<details class="response__detail" open="">
+		<summary class="response__type"><span><span class="badge badge--2xx">200</span>Status 200</span><svg viewBox="0 0 16 16" aria-hidden="true" class="response__type--icon"><path d="M8 13.6l-8-8L2.6 3 8 8.4 13.4 3 16 5.6z"></path></svg></summary>
+		
+
+
+
+<div class="response__content">
+    <span class="response__body">Body</span>
+    <div class="dropdown">
+    <span class="response__mimetype">application/json</span></div>
+</div>
+
+    <div id="body_24b0cb377cc5bb0818b53ef849e69854applicationjson" class="body__content" >
+    <div class="body__content">
+
+
+
+
+<div class="data-type__object-title">Object</div>
+
+
+</div>
+        <div class="definition-example">
+        <div id="bodySample_24b0cb377cc5bb0818b53ef849e69854applicationjson" class="definition-example__title">
+            <span>Status 200</span><span class="definition-example__mimetype">
+                    application/json</span>
+            </div>
+        <div role="region" tabindex="0" class="code-container" aria-labelledby="bodySample_24b0cb377cc5bb0818b53ef849e69854applicationjson">
+
+
+	
+		<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">&lt;facts&gt;singleline&lt;/facts&gt;</span></span></span></code></pre></div></div>
+    </div>
+        </div>
+    </details>
+</div>
+</div>
+	</div>
+	<div class="operation__content-info operation__content-info--odd">
+		
+<div class="try-in-tester js-try-in-tester">
+  <button class="try-in-tester__action js-try-in-tester--action btn btn--primary js-operation-try-in-tester "
+          data-operation-id="99ba7222-e7d9-4393-961f-fd3a901621ce" type="button">
+    Try in API Tester
+    </button>
+  </div>
+
+</div>
+</section>
+<span class="back-to-top-wrapper"><a class="back-to-top" href="#"><span class="sr-only">back to top</span>↑</a></span></main>
+    <footer class="footer">
+
+
+<span>API Portal</span>
+</footer>
+
+		
+
+<div tabindex="-1" role="dialog" aria-labelledby="modal-label" hidden id="try-in-tester-version-modal" class="modal__overlay js-close-modal">
+  <div role="document" class="modal__wrapper scrollable">
+    <h2 id="modal-label" class="modal__title">Talend API Tester upgrade is required</h2>
+    <div class="modal__content">
+      <p>Your Talend API Tester extension is in Version <strong id="js-current-version-tester"></strong>, but the minimum required version for this feature is <strong id="js-minimum-version-tester"></strong>.</p>
+      <a target="_blank" rel="noopener" href="https://help.talend.com/access/sources/content/topic?pageid=tester_update_extension&EnrichVersion=Cloud&afs:lang=en">
+        Learn more about API Tester<svg role="img" aria-label='Open in a new window' class="open-link-new-window-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+          <path d="M16 0v6h-2V3l-8.489 8.773-1.253-1.253L13 2h-3V0zm-4 10v4H2V4h4V2H0v14h14v-6z"></path>
+        </svg>
+      </a>
+    </div>
+    <button type="button" aria-label='Close modal' class="js-close-modal modal__close btn--naked">&times;</button>
+  </div>
+</div>
+<script type="module" src="../../../js/apis.min.0af8c111f772d278d2fbde38fa252ca44e9268c68955afb4aa5b85633382efb3.js"></script>
+		
+		<script type="module" src="../../../js/tryInTester.min.3429317c2b5f67d690fc7dc79759ee71803fb089dc3628fb584c21f3f2a782fd.js"></script>
+	</body>
+</html>

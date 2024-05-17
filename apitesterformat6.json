@@ -1,0 +1,376 @@
+{
+  "version" : 6,
+  "entities" : [ {
+    "entity" : {
+      "type" : "Project",
+      "name" : "API_Test_GPT 1.0.0",
+      "description" : "Keine Beschreibung",
+      "importedFrom" : "a347a150-95b3-425a-acc7-8904e8e74613"
+    },
+    "children" : [ {
+      "entity" : {
+        "type" : "Request",
+        "id" : "8f1c502a-9732-4039-95f3-9b505d54afdf",
+        "name" : "/getFacts",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getFacts/",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/json"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "54c5c001-9844-4c82-b89d-338578f5860d",
+        "name" : "getAccounts",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getDimensions/Accounts",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "0e945b02-2797-400a-be22-6467e8cf11bf",
+        "name" : "getCalendars",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getDimensions/Calendars",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "1e4fad66-00b9-4da9-9201-0840fa0a8315",
+        "name" : "getCostcenters",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getDimensions/Costcenters",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "cfa2c36b-f716-4ced-a296-58991adae5f5",
+        "name" : "getDepartments",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getDimensions/Departments",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "4e71284d-961e-46bd-b401-4129a76a58ef",
+        "name" : "getEmployees",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getDimensions/Employees",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "da593950-f72b-42dc-b714-7aaaa6f24efc",
+        "name" : "getGrades",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getDimensions/Grades",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "36eb9a25-afbd-460a-bf0b-0cbf9f686bbb",
+        "name" : "getSalary",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getDimensions/Salaries",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "dde1f81d-7738-45b1-81f1-a8d54b3b971d",
+        "name" : "getBalance",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getFacts/Balance",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/json"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "a42ca501-608d-4687-a306-43ddf6b9e0c8",
+        "name" : "getEmployeeSPOT",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getFacts/Employee",
+          "query" : {
+            "delimiter" : "&",
+            "items" : [ {
+              "name" : "limit",
+              "value" : "100",
+              "enabled" : false
+            }, {
+              "name" : "offset",
+              "value" : "200",
+              "enabled" : false
+            } ]
+          }
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/xml"
+        } ],
+        "headersType" : "Form",
+        "uriEditor" : true
+      }
+    }, {
+      "entity" : {
+        "type" : "Request",
+        "id" : "99ba7222-e7d9-4393-961f-fd3a901621ce",
+        "name" : "Test_OP",
+        "uri" : {
+          "host" : "${\"BaseUrl\"}",
+          "path" : "/getFacts/template"
+        },
+        "method" : {
+          "link" : "",
+          "name" : "GET"
+        },
+        "headers" : [ {
+          "enabled" : true,
+          "name" : "Accept",
+          "value" : "application/json"
+        } ],
+        "headersType" : "Form"
+      }
+    } ]
+  } ],
+  "environments" : [ {
+    "name" : "API_Test_GPT 1.0.0",
+    "importedFrom" : {
+      "projectId" : "a347a150-95b3-425a-acc7-8904e8e74613"
+    },
+    "variables" : {
+      "28cd364c-a4a1-46ba-9416-be7a81d09fb5" : {
+        "name" : "BaseUrl",
+        "value" : "http://localhost:8090",
+        "enabled" : true,
+        "private" : false
+      }
+    }
+  } ]
+}
